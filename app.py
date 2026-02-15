@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 from data_pipeline import generate_simulated_data
-from features import add_time_features, add_growth_features
+from features import add_time_features, compute_monthly_volume, compute_salary_stats
 from analytics import calculate_growth, forecast_linear
 from config import FORECAST_MONTHS
 
@@ -38,7 +38,7 @@ filtered_df = df[
 ]
 
 # Monthly Aggregation
-monthly = add_growth_features(filtered_df)
+monthly = compute_monthly_volume(filtered_df)
 
 # KPIs
 col1, col2, col3 = st.columns(3)
