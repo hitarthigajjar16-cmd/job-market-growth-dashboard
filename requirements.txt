@@ -1,6 +1,8 @@
 streamlit
-beautifulsoup4
 pandas
-matplotlib
 numpy
+matplotlib
+beautifulsoup4
+requests
 lxml
+scikit-learn
